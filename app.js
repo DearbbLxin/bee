@@ -4,6 +4,10 @@ const AUTH = require('utils/auth')
 const i18n = require("i18n/index")
 App({
   onLaunch: function() {
+    wx.cloud.init({
+      env: 'cloud1-3glve9gc4001de64', // 替换为实际环境ID
+      traceUser: true
+    })
     i18n.getLanguage()
     this.setTabBarLanguage()
     const $t = i18n.$t()
